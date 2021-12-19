@@ -42,6 +42,21 @@ class Test {
                     Integer ans1 = a1 + a2;
                     System.out.println("The addition is:" + ans1);
                     break;
+                case "subtraction of numbers":
+                case "subtraction of number":
+                case "subtract numbers":
+                case "subtract":
+                    System.out.println("Okay\nEnter the two numbers");
+                    Integer s1 = sc.nextInt();
+                    Integer s2 = sc.nextInt();
+                    Integer subans1 = s1 + s2;
+                    System.out.println("The subtraction of numbers :" + subans1);
+                    break;
+
+
+
+                    
+
                 case "exit":
                 case "quit":
                 case "close":
@@ -59,6 +74,7 @@ class Test {
                     String appName = sc.nextLine();
                     appopener(appName);
                     break;
+
 
                 default:
                     System.out.println("Sorry i didnt got that one!");
