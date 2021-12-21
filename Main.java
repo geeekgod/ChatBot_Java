@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Test {
+class Main {
 
     static int randomIndex(int arrayLen) {
         int rnd = new Random().nextInt(arrayLen);
@@ -14,16 +14,16 @@ class Test {
         try {
             runtime.exec(input);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Sorry your application cannot be found");
         }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("========================");
-        System.out.println("  Welcome to SmartChat");
-        System.out.println("========================\n");
+        System.out.println("===========================");
+        System.out.println("  Welcome to SmartChatBot");
+        System.out.println("===========================\n");
 
         String[] greetMethods = { "Hi", "Hii", "Hello", "Hey", "Hie", "Hola", "Holla", "Salute" };
 
@@ -96,6 +96,7 @@ class Test {
                     break;
                 case "addtion of numbers":
                 case "addtion of number":
+                case "addition":
                 case "add numbers":
                 case "add":
                 case "plus":
@@ -104,9 +105,11 @@ class Test {
                     Integer a2 = sc.nextInt();
                     Integer ans1 = a1 + a2;
                     System.out.println("The addition is:" + ans1);
+                    sc.nextLine();
                     break;
                 case "subtraction of numbers":
                 case "subtraction of number":
+                case "subtraction":
                 case "subtract numbers":
                 case "subtract":
                 case "sub":
@@ -117,10 +120,48 @@ class Test {
                     if (s1 > s2) {
                         Integer subans1 = s1 - s2;
                         System.out.println("The subtraction of numbers :" + subans1);
+                        sc.nextLine();
                         break;
                     } else {
                         Integer subans1 = s2 - s1;
                         System.out.println("The subtraction of numbers :" + subans1);
+                        sc.nextLine();
+                        break;
+                    }
+                case "multiplication of numbers":
+                case "multiplication of number":
+                case "multiplication":
+                case "multiply numbers":
+                case "multiply":
+                case "mul":
+                case "product":
+                    System.out.println("Okay\nEnter the two numbers");
+                    Integer m1 = sc.nextInt();
+                    Integer m2 = sc.nextInt();
+                    Integer mulans = m1 * m2;
+                    System.out.println("The multiplication of numbers :" + mulans);
+                    sc.nextLine();
+                    break;
+
+                case "division of numbers":
+                case "division of number":
+                case "divide numbers":
+                case "divide":
+                case "division":
+                case "div":
+                    System.out.println("Okay\nEnter the two numbers");
+                    System.out.println("Enter the dividend : ");
+                    Float d1 = sc.nextFloat();
+                    System.out.println("Enter the divisor : ");
+                    Float d2 = sc.nextFloat();
+                    if (d2 == 0) {
+                        System.out.println("Undefined");
+                        sc.nextLine();
+                        break;
+                    } else {
+                        Float divAns = d1 / d2;
+                        System.out.println("The divison is " + divAns);
+                        sc.nextLine();
                         break;
                     }
 
@@ -131,22 +172,38 @@ class Test {
                 case "i'm sad":
                     System.out.println(jokesMethod[randomIndex(jokesMethod.length)]);
                     break;
-                case "exit":
-                case "quit":
-                case "close":
-                case "shut down":
-                    System.out.println("Byee !!");
-                    java.lang.System.exit(0);
-                    break;
 
                 case "run":
                 case "run apps":
                 case "run app":
                 case "start apps":
                 case "start app":
+                case "app":
+                case "apps":
                     System.out.println("Enter the name of app:");
                     String appName = sc.nextLine();
                     appopener(appName);
+                    break;
+
+                case "help":
+                case "-h":
+                case "h":
+                case "support":
+                    System.out.println("Welcome to SmartChatBot help center");
+                    System.out.println("Enter Commands and Smart Chat Bot will proccess and reply");
+                    System.out.println("Example of few commads: ");
+                    System.out.println("1. Greeting - hello, hi, hey");
+                    System.out.println("2. Arithematic Operations: add, sub, multiplication, division");
+                    System.out.println("3. Ask for jokes: jokes, tell me a joke, make me laugh, im sad");
+                    System.out.println("4. Start an application: start app, run app, app");
+                    break;
+
+                case "exit":
+                case "quit":
+                case "close":
+                case "shut down":
+                    System.out.println("Byee !!");
+                    java.lang.System.exit(0);
                     break;
 
                 default:
