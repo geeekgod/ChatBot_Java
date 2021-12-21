@@ -78,6 +78,7 @@ class Main {
                 "What is a witch’s favorite subject in school? Spelling.",
                 "What’s brown and sticky? A stick." };
 
+        String[] statusMethod = { "I'm fine!", "I'm good !", "Awesome!", "Great!" };
         while (true) {
             System.out.print("How can i help you? ");
             String str = sc.nextLine();
@@ -92,7 +93,7 @@ class Main {
                     System.out.println(greetMethods[randomIndex(greetMethods.length)]);
                     break;
                 case "how are you":
-                    System.out.println("I'm fine!");
+                    System.out.println(statusMethod[randomIndex(statusMethod.length)]);
                     break;
                 case "addtion of numbers":
                 case "addtion of number":
@@ -166,6 +167,10 @@ class Main {
                     }
 
                 case "jokes":
+                case "joke":
+                case "im bored":
+                case "i want to laugh":
+                case "i wanna laugh":
                 case "tell me a joke":
                 case "make me laugh":
                 case "im sad":
@@ -202,6 +207,9 @@ class Main {
                 case "quit":
                 case "close":
                 case "shut down":
+                case "bye":
+                case "good bye":
+                case "goodbye":
                     System.out.println("Byee !!");
                     java.lang.System.exit(0);
                     break;
